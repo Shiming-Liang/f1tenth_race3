@@ -7,9 +7,15 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     # Launch the pure pursuit node
-    pure_pursuit_node = Node(
+    rrt_node = Node(
         package='lab6_pkg',
         executable='rrt_node',
+    )
+    
+    # Launch the pure pursuit node
+    pure_pursuit_node = Node(
+        package='pure_pursuit',
+        executable='pure_pursuit_node',
     )
 
     # Launch the f1tenth_gym_ros gym_bridge_launch.py
@@ -25,5 +31,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         pure_pursuit_node,
+        rrt_node,
         f1tenth_gym_ros_launch,
     ])

@@ -20,8 +20,8 @@ class PurePursuit(Node):
     def __init__(self):
         super().__init__('pure_pursuit_node')
         # TODO: create ROS subscribers and publishers
-        self.odom_sub = self.create_subscription(Odometry, '/ego_racecar/odom', self.odom_sub_callback, 10)
-        self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 10)
+        self.odom_sub = self.create_subscription(Odometry, '/opp_racecar/odom', self.odom_sub_callback, 10)
+        self.drive_pub = self.create_publisher(AckermannDriveStamped, '/opp_drive', 10)
         self.waypoint_pub = self.create_publisher(PointStamped, '/waypoint', 10)
 
         # parameters

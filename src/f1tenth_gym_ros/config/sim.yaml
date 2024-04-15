@@ -55,7 +55,7 @@ bridge:
 
     # opp starting pose on map
     sx1: 1.0
-    sy1: 4.0
+    sy1: 6.0
     stheta1: 1.57
 
     # teleop
